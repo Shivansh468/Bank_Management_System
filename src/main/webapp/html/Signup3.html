@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Page 3</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center">Signup - Step 3</h2>
+    <form action="/submit-signup3" method="POST">
+        <div class="form-group">
+            <label>Account Type:</label><br>
+            <label class="radio-inline">
+                <input type="radio" name="account_type" value="Savings Account" required> Savings Account
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="account_type" value="Fixed Deposit" required> Fixed Deposit
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="account_type" value="Salary Account" required> Salary Account
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="account_type" value="Current Account" required> Current Account
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label for="card_number">Card Number:</label>
+            <input type="text" id="card_number" name="card_number" class="form-control" placeholder="XXXX-XXXX-XXXX-2005" required>
+        </div>
+
+        <div class="form-group">
+            <label for="pin">PIN:</label>
+            <input type="password" id="pin" name="pin" class="form-control" placeholder="XXXX" required>
+        </div>
+
+        <div class="form-group">
+            <label>Services Required:</label><br>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="services[]" value="ATM Card"> ATM Card
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="services[]" value="Emails & SMS Alerts"> Emails & SMS Alerts
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="services[]" value="Mobile Banking"> Mobile Banking
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="services[]" value="Internet Banking"> Internet Banking
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="services[]" value="Check Book"> Check Book
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="services[]" value="E-Statement"> E-Statement
+            </label>
+        </div>
+
+        <div class="form-group text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-secondary" onclick="window.location.href='/cancel-signup'">Cancel</button>
+        </div>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Cash</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 400px;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .amount-buttons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .amount-buttons .btn {
+            padding: 10px 0;
+            font-size: 16px;
+        }
+        .btn-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .btn {
+            width: 48%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container text-center">
+    <h2>Fast Cash</h2>
+    <p>Choose the amount you want to Withdraw:</p>
+
+    <form>
+        <div class="form-group">
+            <input type="text" class="form-control text-center" id="selectedAmount" placeholder="Amount" readonly>
+        </div>
+
+        <div class="amount-buttons">
+            <button type="button" class="btn btn-primary" onclick="setAmount(100)">100</button>
+            <button type="button" class="btn btn-primary" onclick="setAmount(200)">200</button>
+            <button type="button" class="btn btn-primary" onclick="setAmount(500)">500</button>
+            <button type="button" class="btn btn-primary" onclick="setAmount(1000)">1000</button>
+            <button type="button" class="btn btn-primary" onclick="setAmount(2500)">2500</button>
+            <button type="button" class="btn btn-primary" onclick="setAmount(10000)">10000</button>
+        </div>
+
+        <div class="btn-container">
+            <button type="submit" class="btn btn-success">Withdraw</button>
+            <button type="button" class="btn btn-secondary" onclick="window.location.href='transactions.html'">Back</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    
+    function setAmount(amount) {
+        document.getElementById('selectedAmount').value = amount;
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

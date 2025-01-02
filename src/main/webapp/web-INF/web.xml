@@ -1,0 +1,18 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="3.0">
+    <display-name>Bank Management System</display-name>
+    
+    
+    <welcome-file-list>
+        <welcome-file>html/login.html</welcome-file>
+        <welcome-file>html/Signup1.html</welcome-file>
+        <welcome-file>html/Signup2.html</welcome-file>
+        <welcome-file>html/Signup3.html</welcome-file>
+        <welcome-file>html/transactions.html</welcome-file>
+        <welcome-file>html/Deposit.html</welcome-file>
+        <welcome-file>html/Withdrawl.html</welcome-file>
+        <welcome-file>html/FastCash.html</welcome-file>
+        <welcome-file>html/BalanceEnquiry.html</welcome-file>
+        <welcome-file>html/PinChange.html</welcome-file>
+        
+    </welcome-file-list>
+</web-app>

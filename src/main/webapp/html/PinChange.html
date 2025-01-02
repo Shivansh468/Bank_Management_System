@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Change</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 400px;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .btn-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .btn {
+            width: 48%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center">Pin Change</h2>
+    <form id="pinChangeForm">
+        
+        <div class="form-group">
+            <label for="newPin">Enter New PIN</label>
+            <input type="password" class="form-control" id="newPin" placeholder="Enter New PIN" required>
+        </div>
+
+        
+        <div class="form-group">
+            <label for="confirmPin">Re-enter New PIN</label>
+            <input type="password" class="form-control" id="confirmPin" placeholder="Re-enter New PIN" required>
+        </div>
+
+        
+        <div class="btn-container">
+            <button type="button" class="btn btn-success" onclick="changePin()">Proceed</button>
+            <button type="button" class="btn btn-secondary" onclick="window.location.href='transactions.html'">Back</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    function changePin() {
+        const newPin = document.getElementById('newPin').value;
+        const confirmPin = document.getElementById('confirmPin').value;
+
+        if (newPin === confirmPin && /^[0-9]+$/.test(newPin)) {
+            alert('PIN changed successfully!');
+            window.location.href='transactions.html';
+        } else if (newPin !== confirmPin) {
+            alert("Pins don't match. Please try again.");
+        } else {
+            alert('PIN should only contain numbers.');
+        }
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Page 1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center">Signup - Step 1</h2>
+    <form action="/submit-signup1" method="POST">
+        <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="father_name">Father's Name:</label>
+            <input type="text" id="father_name" name="father_name" class="form-control" placeholder="Enter your father's name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email address" required>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" class="form-control" placeholder="Enter your address" rows="3" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" class="form-control" placeholder="Enter your city" required>
+        </div>
+
+        <div class="form-group">
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" class="form-control" placeholder="Enter your state" required>
+        </div>
+
+        <div class="form-group">
+            <label for="pincode">Pincode:</label>
+            <input type="text" id="pincode" name="pincode" class="form-control" placeholder="Enter your pincode" required>
+        </div>
+
+        <div class="form-group">
+            <label>Gender:</label><br>
+            <label class="radio-inline">
+                <input type="radio" name="gender" value="Male" required> Male
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="gender" value="Female" required> Female
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="gender" value="Other" required> Other
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label>Marital Status:</label><br>
+            <label class="radio-inline">
+                <input type="radio" name="marital_status" value="Married" required> Married
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="marital_status" value="Unmarried" required> Unmarried
+            </label>
+        </div>
+
+        <div class="form-group text-center">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='signup2.html'">Next</button>
+        </div>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

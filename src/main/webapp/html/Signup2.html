@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Page 2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center">Signup - Step 2</h2>
+    <form action="/submit-signup2" method="POST">
+        <div class="form-group">
+            <label for="religion">Religion:</label>
+            <select id="religion" name="religion" class="form-control" required>
+                <option value="" disabled selected>Select your religion</option>
+                <option value="Hindu">Hindu</option>
+                <option value="Muslim">Muslim</option>
+                <option value="Christian">Christian</option>
+                <option value="Sikh">Sikh</option>
+                <option value="Others">Others</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="category">Category:</label>
+            <select id="category" name="category" class="form-control" required>
+                <option value="" disabled selected>Select your category</option>
+                <option value="General">General</option>
+                <option value="OBC">OBC</option>
+                <option value="SC">SC</option>
+                <option value="ST">ST</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="income">Annual Income:</label>
+            <select id="income" name="income" class="form-control" required>
+                <option value="" disabled selected>Select your income range</option>
+                <option value="Less than 2.5 Lakhs">Less than 2.5 Lakhs</option>
+                <option value="2.5 Lakhs to 5 Lakhs">2.5 Lakhs to 5 Lakhs</option>
+                <option value="5 Lakhs to 10 Lakhs">5 Lakhs to 10 Lakhs</option>
+                <option value="More than 10 Lakhs">More than 10 Lakhs</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="education">Educational Qualifications:</label>
+            <select id="education" name="education" class="form-control" required>
+                <option value="" disabled selected>Select your highest qualification</option>
+                <option value="High School">High School</option>
+                <option value="Undergraduate">Undergraduate</option>
+                <option value="Postgraduate">Postgraduate</option>
+                <option value="Doctorate">Doctorate</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="occupation">Occupation:</label>
+            <select id="occupation" name="occupation" class="form-control" required>
+                <option value="" disabled selected>Select your occupation</option>
+                <option value="Employed">Employed</option>
+                <option value="Self-Employed">Self-Employed</option>
+                <option value="Student">Student</option>
+                <option value="Unemployed">Unemployed</option>
+                <option value="Retired">Retired</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="pan">PAN Number:</label>
+            <input type="text" id="pan" name="pan" class="form-control" placeholder="Enter PAN number" required>
+        </div>
+
+        <div class="form-group">
+            <label for="aadhar">Aadhar Number:</label>
+            <input type="text" id="aadhar" name="aadhar" class="form-control" placeholder="Enter Aadhar number" required>
+        </div>
+
+        <div class="form-group">
+            <label>Are you a Senior Citizen?</label><br>
+            <label class="radio-inline">
+                <input type="radio" name="senior_citizen" value="Yes" required> Yes
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="senior_citizen" value="No" required> No
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label>Do you have an Existing Account?</label><br>
+            <label class="radio-inline">
+                <input type="radio" name="existing_account" value="Yes" required> Yes
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="existing_account" value="No" required> No
+            </label>
+        </div>
+
+        <div class="form-group text-center">
+                <button type="button" class="btn btn-primary" onclick="window.location.href='signup3.html'">Next</button>
+
+        </div>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
